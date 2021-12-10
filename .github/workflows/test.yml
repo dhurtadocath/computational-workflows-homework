@@ -1,0 +1,14 @@
+name: computational-workflows-homework CI
+on: [push]
+jobs:
+  tests:
+    runs-on: ubuntu-20.04
+    container: dhurtadocath/computational-workflows-homework:latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run tests
+        run: |
+          py.test-3
